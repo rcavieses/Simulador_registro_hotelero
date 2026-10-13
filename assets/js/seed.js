@@ -85,7 +85,7 @@ const Seed = {
       version: 1,
       seq: 5000,
       businessDate: bd,
-      hotel: { name: 'Hotel Demo Opera', code: 'HDO', address: 'Av. Principal 1234', city: 'Santiago', country: 'Chile', phone: '+56 2 2000 0000', email: 'reservas@hoteldemo.com', currency: 'USD', taxRate: 19, checkIn: '15:00', checkOut: '12:00' },
+      hotel: { name: 'Hotel Demo', code: 'DEMO', address: 'Av. Principal 1234', city: 'Santiago', country: 'Chile', phone: '+56 2 2000 0000', email: 'reservas@hoteldemo.com', currency: 'USD', taxRate: 19, checkIn: '15:00', checkOut: '12:00' },
       users: [
         { username: 'admin', password: 'admin', name: 'Administrador', role: 'admin', active: true },
         { username: 'recepcion', password: 'recepcion', name: 'Ana Recepción', role: 'recepcion', active: true },

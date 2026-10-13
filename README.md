@@ -1,6 +1,6 @@
 # Simulador de registro hotelero · PMS (demo)
 
-Demo de un **Property Management System** hotelero inspirado en Oracle Opera 5. Es una aplicación web estática (HTML + CSS + JavaScript sin dependencias) pensada para publicarse en **GitHub Pages**. Es el prototipo funcional de la futura versión conectada a los servicios de Google.
+Demo de un **Property Management System** hotelero de desarrollo propio. Es una aplicación web estática (HTML + CSS + JavaScript sin dependencias) pensada para publicarse en **GitHub Pages**. Es el prototipo funcional de la futura versión conectada a los servicios de Google.
 
 > Los datos se guardan en el `localStorage` de tu navegador. Cada visitante tiene su propia copia, y puedes reiniciarla desde *Configuración → Datos del hotel*.
 

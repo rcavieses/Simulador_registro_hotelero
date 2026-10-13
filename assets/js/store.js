@@ -6,7 +6,7 @@
  */
 'use strict';
 
-const DB_KEY = 'pms_opera_demo_v1';
+const DB_KEY = 'pms_demo_v1';
 
 const Store = {
   state: null,
