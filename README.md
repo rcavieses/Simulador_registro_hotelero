@@ -1,6 +1,6 @@
 # Simulador de registro hotelero · PMS (demo)
 
-Demo de un **Property Management System** hotelero de desarrollo propio. Es una aplicación web estática (HTML + CSS + JavaScript sin dependencias) pensada para publicarse en **GitHub Pages**. Es el prototipo funcional de la futura versión conectada a los servicios de Google.
+Demo de un **Property Management System** hotelero de desarrollo propio de **Marine Data Lab**. Es una aplicación web estática (HTML + CSS + JavaScript sin dependencias) pensada para publicarse en **GitHub Pages**. Es el prototipo funcional de la futura versión conectada a los servicios de Google.
 
 > Los datos se guardan en el `localStorage` de tu navegador. Cada visitante tiene su propia copia, y puedes reiniciarla desde *Configuración → Datos del hotel*.
 
@@ -63,3 +63,7 @@ Toda la lógica de negocio (disponibilidad, check-in/out, folios, auditoría) vi
 5. **Integraciones**: Gmail API para confirmaciones y facturas por email, Google Calendar para el calendario de llegadas y grupos, Google Sheets para exportar reportes y Google Drive para guardar documentos escaneados y facturas PDF.
 6. **Hosting**: Firebase Hosting o seguir en GitHub Pages, porque la app sigue siendo estática.
 7. **Migración**: *Exportar JSON* desde la demo e importarlo en Firestore con un script.
+
+## Contacto y licencias
+
+Sistema desarrollado por **Marine Data Lab**. Para comprar una licencia, agendar una demostración o pedir personalizaciones, escribe a [rcavieses@gmail.com](mailto:rcavieses@gmail.com) o usa la pestaña **Contacto** de la aplicación.

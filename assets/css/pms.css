@@ -257,6 +257,17 @@ table.kv { border-collapse: collapse; width: 100%; margin-bottom: 8px; }
 .rep-list a.active:hover { background: var(--navy-2); }
 .rep-body .filters { margin-bottom: 10px; }
 
+/* ---------- Contacto ---------- */
+.contact { display: grid; grid-template-columns: 1fr 1.3fr; gap: 12px; align-items: start; }
+.contact-hero { border-top: 4px solid var(--navy-3); }
+.contact-hero p { margin-top: 0; }
+.contact-list { padding-left: 18px; margin: 0 0 12px; line-height: 1.7; }
+.modal .contact { grid-template-columns: 1fr; }
+.modal .contact .panel { margin-bottom: 0; }
+.login-foot { text-align: center; line-height: 1.6; }
+.login-foot a { color: #fff; text-decoration: underline; }
+.statusbar a { color: inherit; text-decoration: underline; }
+
 /* ---------- Modales y avisos ---------- */
 .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 25, 45, .45); display: flex; align-items: flex-start; justify-content: center; padding: 60px 16px 16px; z-index: 50; overflow: auto; }
 .modal { background: #fff; width: 100%; max-width: 480px; border-radius: 5px; box-shadow: 0 20px 50px rgba(0,0,0,.35); border: 1px solid var(--navy); }
@@ -303,7 +314,7 @@ table.kv { border-collapse: collapse; width: 100%; margin-bottom: 8px; }
   .menubar.open .menu-drop { display: block; position: static; box-shadow: none; border: 0; padding-left: 10px; background: transparent; }
   .menu-search { flex: 1; }
   .menu-search input { width: 100%; }
-  .cols-2, .res-grid, .reports, .f3 { grid-template-columns: 1fr; }
+  .cols-2, .res-grid, .reports, .f3, .contact { grid-template-columns: 1fr; }
   .f2 { grid-template-columns: 1fr 1fr; }
   .filters label { flex-basis: 100%; }
   .bars { gap: 2px; }

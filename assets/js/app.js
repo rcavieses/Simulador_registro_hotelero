@@ -48,6 +48,7 @@ const MENU = [
 const ROUTE_ROLES = { dashboard: ROLES_ALL };
 MENU.forEach(m => m.items.forEach(i => { ROUTE_ROLES[i.route] = i.roles; }));
 ROUTE_ROLES.profile = RSV;
+ROUTE_ROLES.contact = ROLES_ALL;
 ROUTE_ROLES.folio = ['admin', 'recepcion', 'auditor'];
 
 const App = {
@@ -83,7 +84,7 @@ const App = {
             ${Store.state.users.filter(u => u.active).map(u => `<button class="chip" data-u="${esc(u.username)}" data-p="${esc(u.password)}">${esc(u.username)} <small>${esc(ROLE_LABEL[u.role])}</small></button>`).join('')}
           </div>
         </div>
-        <p class="login-foot">Demo estática · los datos se guardan sólo en este navegador</p>
+        <p class="login-foot">Desarrollado por <b>${esc(VENDOR.name)}</b> · <a href="#" id="login-contact">¿Quieres este sistema? Contáctanos</a><br>Demo · los datos se guardan sólo en este navegador</p>
       </div>`;
     $('#login-form').onsubmit = e => {
       e.preventDefault();
@@ -91,6 +92,10 @@ const App = {
       this.login(username, password);
     };
     $$('.demo-users .chip').forEach(b => b.onclick = () => this.login(b.dataset.u, b.dataset.p));
+    $('#login-contact').onclick = e => {
+      e.preventDefault();
+      Modal.open({ title: `Contacto · ${VENDOR.name}`, wide: true, body: Contact.html(), onMount: m => Contact.bind(m) });
+    };
     $('#google-btn').onclick = () => toast('El inicio de sesión con Google estará disponible en la versión conectada (Firebase Auth).', 'info');
   },
 
@@ -137,13 +142,14 @@ const App = {
             ${items.map(i => `<a href="#/${i.route}">${esc(i.label)}${i.key ? `<kbd>${i.key}</kbd>` : ''}</a>`).join('')}
           </div></div>`;
         }).join('')}
+        <a href="#/contact" class="menu-top">Contacto</a>
         <div class="menu-search"><input id="quick-search" placeholder="Buscar huésped, conf. o hab..." aria-label="Búsqueda rápida"></div>
       </nav>
       <main id="view"></main>
       <footer class="statusbar">
         <span id="sb-route"></span>
         <span class="sb-keys">F2 Nueva · F3 Buscar · F5 Llegadas · F6 En casa · F7 Salidas · F8 Caja · F9 HK · F10 Reportes</span>
-        <span>${esc(Store.state.hotel.code)} · ${esc(this.user.username)}</span>
+        <span>${esc(Store.state.hotel.code)} · ${esc(this.user.username)} · Desarrollado por <a href="#/contact">${esc(VENDOR.name)}</a></span>
       </footer>`;
     $('#logout').onclick = () => this.logout();
     $('#burger').onclick = () => $('#menubar').classList.toggle('open');

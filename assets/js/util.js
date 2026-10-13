@@ -94,6 +94,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') Modal.closeT
 function printHTML(title, html) {
   const area = $('#print-area');
   area.innerHTML = `<div class="print-doc"><h2>${esc(Store.state.hotel.name)}</h2><h3>${esc(title)}</h3>${html}
-    <p class="muted small">Impreso ${D.stamp()} por ${esc(App.user?.name || '')} · Fecha de negocio ${D.fmt(Store.state.businessDate)}</p></div>`;
+    <p class="muted small">Impreso ${D.stamp()} por ${esc(App.user?.name || '')} · Fecha de negocio ${D.fmt(Store.state.businessDate)} · Sistema desarrollado por ${esc(VENDOR.name)}</p></div>`;
   window.print();
 }
